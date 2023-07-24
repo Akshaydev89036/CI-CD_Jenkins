@@ -50,7 +50,7 @@ pipeline{
                        sshagent(['tomcat-credentials']) {
                            sh """
                            scp -o StrictHostKeyChecking=no target/*.jar ubuntu@54.205.176.10:/opt/tomcat-9/webapps
-                           ssh -o StrictHostKeyChecking=no ubuntu@354.205.176.10 /opt/tomcat-9/bin/shutdown.sh
+                           ssh -o StrictHostKeyChecking=no ubuntu@54.205.176.10 /opt/tomcat-9/bin/shutdown.sh
                            ssh -o StrictHostKeyChecking=no ubuntu@54.205.176.10 /opt/tomcat-9/bin/startup.sh
                           
                            """
